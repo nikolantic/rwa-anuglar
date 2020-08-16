@@ -46,7 +46,40 @@ export class InMemoryDataService implements InMemoryDataService {
       rate:4.3,
       genre:'Akcija',
       author:'Hari Sajdbotom',
-    }
+    },
+    {
+      id:5,
+      name:'Ledeni zmaj',
+      price:5,
+      image:'/assets/images/ledeni_zmaj.jpg',
+      description:'Očaravajuća priča iz sveta koji je prethodio  Pesmi leda i vatre o prijateljstvu mlade devojke i njenog zmaja, o hrabrosti i o požrtvovanju.',
+      rate:4.0,
+      genre:'Fantastika',
+      author:'Džordž R. R. Martin',
+    },
+    {
+      id:6,
+      name:'Problem tri tela',
+      price:10,
+      image:'/assets/images/problem_tri_tela.jpg',
+      description:'Očaravajuća priča iz sveta koji je prethodio  Pesmi leda i vatre o prijateljstvu mlade devojke i njenog zmaja, o hrabrosti i o požrtvovanju.',
+      rate:5.0,
+      genre:'Fantastika',
+      author:'Liju Cisin',
+    },
+    {
+      id:7,
+      name:'Uznemireni ljudi',
+      price:15,
+      image:'/assets/images/uznemireni_ljudi.jpg',
+      description:'Očaravajuća priča iz sveta koji je prethodio  Pesmi leda i vatre o prijateljstvu mlade devojke i njenog zmaja, o hrabrosti i o požrtvovanju.',
+      rate:5.0,
+      genre:'Drama',
+      author:'Fredrik Bakman',
+    },
+    
+ 
+   
   ];
     return {bookItems};
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import { Store, select, ActionReducer, Action } from '@ngrx/store';
 import { BookItem } from 'src/app/models/book-item.model';
 
 
@@ -12,11 +12,15 @@ export class HeaderComponent implements OnInit {
 
 
 
-  constructor(private store: Store<{ items: []; cart: [] }>) {
-    store.pipe(select('shop')).subscribe(data => (this.cart = data.cart));
+  constructor(private store: Store<{ items: []; cart: []; price:Number ;shop}>) {
+    store.pipe(select('shop')).subscribe(data => {(this.cart = data['cart'])
+      this.sum=0;
+      this.cart.forEach(el=>this.sum=el.price+this.sum)
+    });
+    
   }
   cart  = [];
-
+  sum:number;
   ngOnInit() {
   }
 

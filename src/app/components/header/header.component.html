@@ -2,12 +2,13 @@
     <div class="brand">
       <img src="/assets/images/logo.jpg" alt="avatar" />
       <h5>The Store</h5>
-      <a routerLink="/" style="color: blue;">Home</a>
+      <a routerLink="/" style="color: gray;">Home</a>
     </div>
     
     <div class="nav">
       <ul>
         <li>
+          <h5>{{sum}}$</h5>
           <img   routerLink="/myCart" [state]="{ product:cart }" src="/assets/images/shopping-bag.png" alt="cart" />
           <span class="badge" *ngIf="cart.length > 0">{{ cart.length }}</span>
         </li>

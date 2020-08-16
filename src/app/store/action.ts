@@ -7,6 +7,7 @@ export enum ActionTypes{
     Remove = '[Product] Remove from cart',
     LoadItems = '[Products] Load items from server',
     LoadSuccess = '[Products] Load success'
+   
 }
 
 export class AddToCart implements Action {
@@ -14,6 +15,7 @@ export class AddToCart implements Action {
   
     constructor(public payload: BookItem) {}
   }
+
   
   export class GetItems implements Action {
     readonly type = ActionTypes.LoadItems;
@@ -31,4 +33,4 @@ export class AddToCart implements Action {
     constructor(public payload: BookItem[]) {}
   }
   
-  export type ActionsUnion = AddToCart | RemoveFromCart | LoadItems | GetItems;    
+  export type ActionsUnion = AddToCart | RemoveFromCart | LoadItems | GetItems ;    

@@ -1,1 +1,26 @@
-<pre>{{ state$ | async | json }}</pre>
+
+  <div class="cartItem" *ngFor="let data of cart">
+    <div class="product-image-holder">
+      <img [src]="data.image" [alt]="data.name" class="data-image" />
+    </div>
+    <div class="product-details">
+      <h3 class="product-details__name">{{ data.name }}</h3>
+      <p class="product-details__author">{{ data.author }}</p>
+      <div class="rating" style="padding-top:10px" >
+        <p class="rating-p" style="margin: 0;" >Rate: {{data.rate}}★</p>
+        <p class="genre-p" style="margin: 0;">Genre: {{ data.genre }}</p>
+        <p class="price-p" style="margin: 0;">Price: {{ data.price }}$</p>
+      </div>
+      <div class="description">
+        <p>{{data.description}}</p>
+      </div>
+    </div>
+    <button
+        class="product-actions__remove"
+        (click)="removeFromCart(data)"
+       
+      >
+        <img  class="btn-img" src="/assets/images/remove-from-cart.png" alt="remove from cart" />
+      </button>
+  </div>
+

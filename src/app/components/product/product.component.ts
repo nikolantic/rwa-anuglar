@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AddToCart, RemoveFromCart } from 'src/app/store/action';
+import { AddToCart, RemoveFromCart} from 'src/app/store/action';
 import { BookItem } from 'src/app/models/book-item.model';
 
 @Component({
@@ -12,7 +12,7 @@ import { BookItem } from 'src/app/models/book-item.model';
   export class ProductComponent implements OnInit {
     constructor(private store: Store<{ items: []; cart: [] }>) {}
   
-    inCart = false;
+    inCart=false;
     @Input() product: BookItem;
   
     addToCart(item: BookItem) {
@@ -24,6 +24,7 @@ import { BookItem } from 'src/app/models/book-item.model';
       this.store.dispatch(new RemoveFromCart(item));
       this.inCart = false;
     }
+   
     ngOnInit() {}
   }
 
