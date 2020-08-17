@@ -1,0 +1,6 @@
+<p class="text-research">Or select your favorite music genre...</p>
+    <div class="dropdown">
+      <select class="select-input" #selectBookGenre [(ngModel)]="selectedBookGenre" (change)="searchGivenBookGenre(selectBookGenre.value)" >
+        <option *ngFor='let bookGenre of bookGenres' value="{{ bookGenre }}">{{ bookGenre }}</option>
+      </select>
+    </div>

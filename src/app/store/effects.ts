@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
-import { catchError, map, mergeMap } from 'rxjs/operators';
+import { catchError, map, mergeMap,switchMap } from 'rxjs/operators';
 import { ActionTypes } from './action';
 import {BookService} from '../services/book.service'
+
 
 
 @Injectable()
@@ -26,6 +27,12 @@ export class ShopEffects {
       )
     )
   );
+
+  
+
+  
+
+  
 
 }
 

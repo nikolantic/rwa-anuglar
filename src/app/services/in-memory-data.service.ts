@@ -7,14 +7,23 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDataService {
 
   createDb(){
-    const bookItems=[{
+
+    const bookGenre=[
+      {id:1, name: 'Drama'},
+      {id:2, name: 'Akcija'},
+      {id:3, name: 'Fantastika'}
+    ];
+
+    const bookItems=[
+     {
+
       id:1,
       name:'Ubistvo u mesopotamiji',
       price:12,
       image:'/assets/images/ubistvo.jpg',
       description:'Dobra knjiga veoma bas',
       rate:4.5,
-      genre:'Krimi',
+      genre:'Drama',
       author:'Agata Kristi',
     },
     {
@@ -37,6 +46,7 @@ export class InMemoryDataService implements InMemoryDataService {
       genre:'Akcija',
       author:'Don Vinslou',
     },
+    
     {
       id:4,
       name:'Plamen na istoku',
@@ -47,6 +57,8 @@ export class InMemoryDataService implements InMemoryDataService {
       genre:'Akcija',
       author:'Hari Sajdbotom',
     },
+    
+    
     {
       id:5,
       name:'Ledeni zmaj',
@@ -67,7 +79,7 @@ export class InMemoryDataService implements InMemoryDataService {
       genre:'Fantastika',
       author:'Liju Cisin',
     },
-    {
+      {
       id:7,
       name:'Uznemireni ljudi',
       price:15,
@@ -78,9 +90,10 @@ export class InMemoryDataService implements InMemoryDataService {
       author:'Fredrik Bakman',
     },
     
+    
  
    
   ];
-    return {bookItems};
+    return {bookItems,bookGenre};
   }
 }

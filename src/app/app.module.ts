@@ -15,7 +15,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
-
+import { GenreBookItemComponent } from './components/genre-book-item/genre-book-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,12 +25,14 @@ import { ProductListComponent } from './components/product-list/product-list.com
     HeaderComponent,
     ProductComponent,
     ProductListComponent,
-    routingComponents
+    routingComponents,
+    GenreBookItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
     }),

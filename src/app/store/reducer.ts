@@ -2,8 +2,7 @@ import { ActionsUnion, ActionTypes } from './action';
     
     export const initialState = {
       items: [],
-      cart: [],
-      price: []
+      cart: []
     };
     export function ShopReducer(state = initialState, action: ActionsUnion) {
         switch (action.type) {
@@ -23,13 +22,13 @@ import { ActionsUnion, ActionTypes } from './action';
             
             };
 
-      
-      
           case ActionTypes.Remove:
             return {
               ...state,
               cart: [...state.cart.filter(item => item.name !== action.payload.name)]
             };
+
+            
       
           default:
             return state;
