@@ -4,13 +4,13 @@
       <h5>The Store</h5>
       <a routerLink="/" style="color: gray;">Home</a>
     </div>
-    
+    <h2>{{mess}}</h2>
     <div class="nav">
       <ul>
         <li>
-          <h5>{{sum}}$</h5>
-          <img   routerLink="/myCart" [state]="{ product:cart }" src="/assets/images/shopping-bag.png" alt="cart" />
-          <span class="badge" *ngIf="cart.length > 0">{{ cart.length }}</span>
+          <h5>{{sum  + sumOfSame}}$</h5>
+          <img routerLink="/myCart" [state]="{ product:cart }" src="/assets/images/shopping-bag.png" alt="cart" />
+          <span class="badge" *ngIf="cart.length > 0">{{ cart.length + cartOfSame.length }}</span>
         </li>
       </ul>
     </div>

@@ -16,11 +16,13 @@ import { BookItem } from 'src/app/models/book-item.model';
     @Input() product: BookItem;
   
     addToCart(item: BookItem) {
+     
       this.store.dispatch(new AddToCart(item));
       this.inCart = true;
     }
   
     removeFromCart(item: BookItem) {
+      
       this.store.dispatch(new RemoveFromCart(item));
       this.inCart = false;
     }

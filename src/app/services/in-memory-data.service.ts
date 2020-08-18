@@ -45,6 +45,7 @@ export class InMemoryDataService implements InMemoryDataService {
       rate:4.3,
       genre:'Akcija',
       author:'Don Vinslou',
+    
     },
     
     {

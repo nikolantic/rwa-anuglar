@@ -15,12 +15,29 @@
         <p>{{data.description}}</p>
       </div>
     </div>
+    
+    <div class="quan">Quanity:
+      <i class="fa fa-book" aria-hidden="true"></i>
+      <span *ngFor="let same of cartOfSame">
+      <i *ngIf="data.id==same.id"class="fa fa-book" aria-hidden="true"></i>
+      </span>
+    </div>
+
+    <div class="action">
+    <button
+        class="product-actions__add"
+        (click)="addToCart(data)"
+        
+      >
+      <img  class="btn-img" src="/assets/images/add-to-cart.png" alt="add to cart" />
+      </button>
+    
     <button
         class="product-actions__remove"
         (click)="removeFromCart(data)"
       >
-        <img  class="btn-img" src="/assets/images/remove-from-cart.png" alt="remove from cart" />
-      </button>
-      
+        <img  class="btn-img2" src="/assets/images/remove-from-cart.png" alt="remove from cart" />
+    </button>
+  </div>
   </div>
 

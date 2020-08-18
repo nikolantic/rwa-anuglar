@@ -1,8 +1,9 @@
 import { ActionsUnion, ActionTypes } from './action';
-    
+
     export const initialState = {
       items: [],
-      cart: []
+      cart: [],
+      same:[]
     };
     export function ShopReducer(state = initialState, action: ActionsUnion) {
         switch (action.type) {
@@ -21,11 +22,20 @@ import { ActionsUnion, ActionTypes } from './action';
               cart: [...state.cart, action.payload],
             
             };
+            case ActionTypes.AddSame:
+              console.log(action.payload)
+              
+              return {
+                ...state,
+                same: [...state.same, action.payload],
+              
+              };
 
           case ActionTypes.Remove:
             return {
               ...state,
-              cart: [...state.cart.filter(item => item.name !== action.payload.name)]
+              cart: [...state.cart.filter(item => item.name !== action.payload.name)],
+              same: [...state.same.filter(item => item.name !== action.payload.name)]
             };
 
             

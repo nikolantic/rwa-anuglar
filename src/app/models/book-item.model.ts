@@ -7,4 +7,5 @@ export interface BookItem{
     rate:number;
     genre:string;
     author:string;
+    
 }

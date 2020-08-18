@@ -1,10 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { BookItem } from 'src/app/models/book-item.model';
 import { ActivatedRoute } from '@angular/router';
 import {  map } from 'rxjs/operators';
 import {Observable} from 'rxjs';
-import { RemoveFromCart } from 'src/app/store/action';
+import { RemoveFromCart, AddToCart, AddToCartSame } from 'src/app/store/action';
 import { Store, select } from '@ngrx/store';
+import { BookSame } from 'src/app/models/book-same.model';
 
 @Component({
   selector: 'app-my-cart-list',
@@ -12,6 +13,7 @@ import { Store, select } from '@ngrx/store';
   styleUrls: ['./my-cart-list.component.css']
 })
 export class MyCartListComponent implements OnInit {
+
   /*
 
   state$: Observable<object>;
@@ -29,18 +31,31 @@ export class MyCartListComponent implements OnInit {
   */
  constructor(private store: Store<{ items: []; cart: []; price:Number ;shop}>) {
   store.pipe(select('shop')).subscribe(data => {(this.cart = data['cart'])
-  
+    console.log(data)
+    this.cartOfSame=data['same']
   });
   
 }
+count:number;
 cart  = [];
+cartOfSame=[];
+sameBook:BookItem[];
 ;
 ngOnInit() {
   
 }
+
 removeFromCart(item: BookItem) {
+  
   this.store.dispatch(new RemoveFromCart(item)); 
 }
+
+addToCart(item: BookItem) {
+ 
+  this.store.dispatch(new AddToCartSame(item));
+  
+}
+
 
 
   
