@@ -9,6 +9,7 @@ export class ProductListComponent implements OnInit {
 
   constructor() { }
   @Input() books: BookItem[] = [];
+  @Input() booksInCart: BookItem[] = [];
   ngOnInit(): void {
   }
 

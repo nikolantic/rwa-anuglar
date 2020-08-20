@@ -1,6 +1,10 @@
 import { BookItem } from './book-item.model';
 
-export interface BookSame{
-    sameItem:BookItem,
-    numOfSame:number
+export class BookSame{
+    book:number;
+    numOfSame:Number;
+    constructor(book:number,numOfSame:Number){
+        this.book=book;
+        this.numOfSame=numOfSame;
+    }
 }

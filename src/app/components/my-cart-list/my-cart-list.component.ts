@@ -3,7 +3,7 @@ import { BookItem } from 'src/app/models/book-item.model';
 import { ActivatedRoute } from '@angular/router';
 import {  map } from 'rxjs/operators';
 import {Observable} from 'rxjs';
-import { RemoveFromCart, AddToCart, AddToCartSame } from 'src/app/store/action';
+import { RemoveFromCart, AddToCart} from 'src/app/store/action';
 import { Store, select } from '@ngrx/store';
 import { BookSame } from 'src/app/models/book-same.model';
 
@@ -36,6 +36,7 @@ export class MyCartListComponent implements OnInit {
   });
   
 }
+
 count:number;
 cart  = [];
 cartOfSame=[];
@@ -52,7 +53,7 @@ removeFromCart(item: BookItem) {
 
 addToCart(item: BookItem) {
  
-  this.store.dispatch(new AddToCartSame(item));
+  this.store.dispatch(new AddToCart(item));
   
 }
 

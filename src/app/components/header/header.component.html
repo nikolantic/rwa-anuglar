@@ -2,9 +2,8 @@
     <div class="brand">
       <img src="/assets/images/logo.jpg" alt="avatar" />
       <h5>The Store</h5>
-      <a routerLink="/" style="color: gray;">Home</a>
+      <a routerLink="/" [state]="{ product:cart }" style="color: gray;">Home</a>
     </div>
-    <h2>{{mess}}</h2>
     <div class="nav">
       <ul>
         <li>

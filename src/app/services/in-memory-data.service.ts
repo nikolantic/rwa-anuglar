@@ -25,6 +25,7 @@ export class InMemoryDataService implements InMemoryDataService {
       rate:4.5,
       genre:'Drama',
       author:'Agata Kristi',
+      
     },
     {
       id:2,

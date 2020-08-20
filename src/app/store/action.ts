@@ -17,14 +17,7 @@ export class AddToCart implements Action {
   
     constructor(public payload: BookItem) {}
   }
-  export class AddToCartSame implements Action {
-    readonly type = ActionTypes.AddSame
-  
-    constructor(public payload: BookItem) {}
-  }
 
-
-  
   export class GetItems implements Action {
     readonly type = ActionTypes.LoadItems;
   }
@@ -42,4 +35,4 @@ export class AddToCart implements Action {
     constructor(public payload: BookItem[]) {}
   }
   
-  export type ActionsUnion = AddToCart | RemoveFromCart | LoadItems | GetItems | AddToCartSame ;    
+  export type ActionsUnion = AddToCart | RemoveFromCart | LoadItems | GetItems  ;    
