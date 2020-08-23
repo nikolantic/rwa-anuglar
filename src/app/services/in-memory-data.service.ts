@@ -91,6 +91,60 @@ export class InMemoryDataService implements InMemoryDataService {
       genre:'Drama',
       author:'Fredrik Bakman',
     },
+    {
+      id:8,
+      name:'Covek po imenu Uve',
+      price:15,
+      image:'/assets/images/covek_po_imenu_uve_v.jpg',
+      description:'„Izvanredno! Smejaćete se, plakati i otkriti saosećanje za džangrizala u svom životu. Takođe, poželećete da se odselite u Skandinaviju, gde je sve nekako simpatičnije.“ People',
+      rate:4.4,
+      genre:'Drama',
+      author:'Fredrik Bakman',
+    },
+    {
+      id:9,
+      name:'Burna vremena',
+      price:15,
+      image:'/assets/images/burna_vremena-mario_vargas_ljosa_v.jpg',
+      description:'Malo je reći da nas je Mario Vargas Ljosa svojim romanom Burna vremena iznenadio. Oslanjajući se tematski na Jarčevu feštu, u poznim stvaralačkim godinama napisao je zasigurno jedan od svojih najboljih romana.',
+      rate:4.5,
+      genre:'Drama',
+      author:'Mario Vargas Ljosa',
+    },
+    {
+      id:10,
+      name:'Američki bogovi',
+      price:13,
+      image:'/assets/images/americki_bogovi-nil_gejmen_v.jpg',
+      description:'Prvi put objavljen 2001, roman Američki bogovi istog časa je postao klasik – intelektualni i umetnički vrhunac višestrukonagrađivanog majstora inovativne fikcije, Nila Gejmena. Sada imate priliku da otkrijete misteriju i magiju nove verzije autorovog rukopisa.',
+      rate:4.5,
+      genre:'Fantastika',
+      author:'Nil Gejmen',
+    },
+    {
+      id:11,
+      name:'Stakleni presto',
+      price:19,
+      image:'/assets/images/stakleni_presto-sara_dz_mas_v.jpg',
+      description:'Prva knjiga najpopularnijeg tinejdž serijala po oceni Amazona. Nagrada YALSA za najbolju knjigu za tinejdžere. Najuži izbor za nagradu MTV Hollywood Crush.',
+      rate:4.3,
+      genre:'Fantastika',
+      author:'Sara Dž. Mas',
+    },
+    {
+      id:12,
+      name:'Malavita',
+      price:9,
+      image:'/assets/images/malavita-tonino_benakvista_v.jpg',
+      description:'Roman koji je inspirisao Martina Skorsezea, Lika Besona i Roberta de Nira da snime najzabavniji film o Mafiji do sada!',
+      rate:4.3,
+      genre:'Akcija',
+      author:'Tonino Benakvista',
+    },
+  
+    
+   
+    
     
     
  

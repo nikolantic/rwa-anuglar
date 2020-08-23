@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
-import { catchError, map, mergeMap,switchMap } from 'rxjs/operators';
+import { catchError, map, mergeMap,switchMap,takeUntil } from 'rxjs/operators';
 import { ActionTypes } from './action';
 import {BookService} from '../services/book.service'
 
@@ -21,6 +21,7 @@ export class ShopEffects {
     mergeMap(() =>
       this.bookService.getAllBookItems().pipe(
         map(books => {
+          
           return { type: ActionTypes.LoadSuccess, payload: books };
         }),
         catchError(() => EMPTY)

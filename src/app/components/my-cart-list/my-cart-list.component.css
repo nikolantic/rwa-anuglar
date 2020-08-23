@@ -76,5 +76,9 @@
     width: 32px;
     cursor: pointer;
   }
+  .description{
+    display: flex;
+    width: 80%;
+  }
   
    

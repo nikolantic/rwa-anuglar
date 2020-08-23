@@ -29,7 +29,11 @@ export class BookService {
     
   }
 
-  getAllBookItemsFromGenres(bookGenres:string){
+  getAllBookItemsFromGenres$(bookGenres:string){
+    if(bookGenres==''){
+      return this.http
+    .get<Array<BookItem>>(this.bookItemsUrl);
+    }
     console.log(bookGenres);
     return this.http.get<Array<BookGenre>>(
       `${this.bookGenreUrl}/?name=${bookGenres}`
