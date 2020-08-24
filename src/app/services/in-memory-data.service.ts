@@ -9,6 +9,7 @@ export class InMemoryDataService implements InMemoryDataService {
   createDb(){
 
     const bookGenre=[
+      {id:4, name: 'All'},
       {id:1, name: 'Drama'},
       {id:2, name: 'Akcija'},
       {id:3, name: 'Fantastika'}
@@ -33,7 +34,7 @@ export class InMemoryDataService implements InMemoryDataService {
       price:12,
       image:'/assets/images/jedan_hitac.jpg',
       description:'Roman po kojem je snimljen svetski filmski hit Džek Ričer.',
-      rate:4.8,
+      rate:5,
       genre:'Akcija',
       author:'Li Cajld',
     },
@@ -107,7 +108,7 @@ export class InMemoryDataService implements InMemoryDataService {
       price:15,
       image:'/assets/images/burna_vremena-mario_vargas_ljosa_v.jpg',
       description:'Malo je reći da nas je Mario Vargas Ljosa svojim romanom Burna vremena iznenadio. Oslanjajući se tematski na Jarčevu feštu, u poznim stvaralačkim godinama napisao je zasigurno jedan od svojih najboljih romana.',
-      rate:4.5,
+      rate:5,
       genre:'Drama',
       author:'Mario Vargas Ljosa',
     },

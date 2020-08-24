@@ -17,6 +17,7 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { GenreBookItemComponent } from './components/genre-book-item/genre-book-item.component';
 import { FormsModule } from '@angular/forms';
+import { TopRatedComponent } from './components/top-rated/top-rated.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     ProductListComponent,
     routingComponents,
-    GenreBookItemComponent
+    GenreBookItemComponent,
+    TopRatedComponent
   ],
   imports: [
     BrowserModule,

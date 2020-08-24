@@ -20,8 +20,6 @@ export class AddToCart implements Action {
 
   export class GetItems implements Action {
     readonly type = ActionTypes.LoadItems;
-
-   
   }
  
   export class RemoveFromCart implements Action {
@@ -36,5 +34,6 @@ export class AddToCart implements Action {
   
     constructor(public payload: BookItem[]) {}
   }
+ 
   
   export type ActionsUnion = AddToCart | RemoveFromCart | LoadItems | GetItems  ;    

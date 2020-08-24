@@ -23,14 +23,14 @@ export class BookService {
     };
   }
 
-  getAllBookItems(){
+  getAllBookItems$():Observable<Array<BookItem>>{
     return this.http
     .get<Array<BookItem>>(this.bookItemsUrl);
     
   }
 
   getAllBookItemsFromGenres$(bookGenres:string){
-    if(bookGenres==''){
+    if(bookGenres=='All'){
       return this.http
     .get<Array<BookItem>>(this.bookItemsUrl);
     }
@@ -46,9 +46,9 @@ export class BookService {
         )
     ); 
   }
- 
 
-  getAllMusicGenres$(): Observable<Array<string>> {
+
+  getAllBookGenres$(): Observable<Array<string>> {
     return this.http
       .get<Array<BookGenre>>(this.bookGenreUrl)
       .pipe(
@@ -61,6 +61,12 @@ export class BookService {
         })
         
       );
+  }
+
+  getBookItemByName$(pattern: string): Observable<Array<BookItem>> {
+    if (!pattern.trim()) { this.getAllBookItems$() }
+    return this.http
+      .get<Array<BookItem>>(`${this.bookItemsUrl}/?name=${pattern}`)
   }
 }
 

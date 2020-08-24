@@ -19,7 +19,7 @@ export class ShopEffects {
   loadBooks$ = this.actions$.pipe(
     ofType(ActionTypes.LoadItems),
     mergeMap(() =>
-      this.bookService.getAllBookItems().pipe(
+      this.bookService.getAllBookItems$().pipe(
         map(books => {
           
           return { type: ActionTypes.LoadSuccess, payload: books };

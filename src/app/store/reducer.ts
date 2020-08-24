@@ -5,6 +5,7 @@ import { BookSame } from '../models/book-same.model';
       items: [],
       cart: [],
       same:[],
+      
     };
     const bookExist=(books,book)=>{
       return books.cart.find(((e)=>e.id===book.id));
@@ -18,9 +19,10 @@ import { BookSame } from '../models/book-same.model';
             console.log(action.payload)
             return {
               ...state,
-              items: [...action.payload]
+              items: [...action.payload.filter(items=>items.rate==5)]
+             
             };
-      
+
           case ActionTypes.Add:
            
             if(bookExist(state,action.payload)){

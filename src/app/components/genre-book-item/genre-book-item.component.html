@@ -1,6 +1,12 @@
-<p class="text-research">Or select your favorite music genre...</p>
+<div class="search-div">
+  <p class="text-research">Search for book by name...</p>
+  <div class="input-group mb-3">
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" #searchBox id="searchBox" (input)="searchBookName(searchBox.value)"/>
+  </div>
+<p class="text-research">Or by genre...</p>
     <div class="dropdown">
       <select class="select-input" #selectBookGenre [(ngModel)]="selectedBookGenre" (change)="searchGivenBookGenre(selectBookGenre.value)" >
         <option *ngFor='let bookGenre of bookGenres' value="{{ bookGenre }}">{{ bookGenre }}</option>
       </select>
     </div>
+</div>
